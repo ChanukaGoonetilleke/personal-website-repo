@@ -1,0 +1,25 @@
+.div {
+  margin: 3rem;
+  height: 400px;
+  width: 300px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  color: rgb(66, 66, 66);
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.discription {
+  color: rgb(66, 66, 66);
+}

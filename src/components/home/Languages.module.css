@@ -1,0 +1,25 @@
+.wrap {
+    background-color: rgba(0, 1, 29, 0.849);
+    height: 800px;
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  display: block;
+  color: white;
+  padding-top: 100px;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  text-align: center;
+  margin: 2rem;
+  
+}

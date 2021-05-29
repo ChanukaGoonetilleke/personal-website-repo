@@ -1,0 +1,23 @@
+.actions {
+  text-align: right;
+}
+
+.actions .button--alt {
+}
+
+.content {
+  text-align: center;
+}
+
+.img {
+}
+
+.title {
+  margin-top: 1rem;
+  color: rgb(66, 66, 66);
+}
+
+.discription {
+  margin-top: 1rem;
+  color: rgb(66, 66, 66);
+}
