@@ -1,4 +1,9 @@
 .button {
     text-align: right;
-    border: 3px solid green;
+}
+
+@media screen and (max-width: 960px) {
+    .button {
+        text-align: center;
+    }
 }
