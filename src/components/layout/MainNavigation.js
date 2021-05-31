@@ -1,35 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { NavLink, Link } from "react-router-dom";
-import classes from "./MainNavigation.module.css";
+
+import { BsX } from "react-icons/bs";
+import { VscMenu } from "react-icons/vsc";
+
+import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
-    <header className={classes.header}>
-        <nav className={classes.navLogo}>
-          <ul>
-            <li>
-              <NavLink to="/">
-                CG
+    <>
+      <nav className={classes["navbar"]}>
+        <div className={classes["nav-container"]}>
+          <NavLink exact to="/" className={classes["nav-logo"]}>
+            CG
+            <i className={classes["fas fa-code"]}></i>
+          </NavLink>
+
+          <ul className={click ? classes["nav-menuChan"] : classes["nav-menu"]}>
+           
+            <li className={classes["nav-item"]}>
+              <NavLink
+                exact
+                to="/projects"
+                activeClassName={classes["active"]}
+                className={classes["nav-links"]}
+                onClick={handleClick}
+              >
+                Projects
+              </NavLink>
+            </li>
+            <li className={classes["nav-item"]}>
+              <NavLink
+                exact
+                to="/contacts"
+                activeClassName={classes["active"]}
+                className={classes["nav-links"]}
+                onClick={handleClick}
+              >
+                Contacts
               </NavLink>
             </li>
           </ul>
-        </nav>
-      <nav className={classes.nav}>
-        <ul>
-          <li>
-            <NavLink to="/projects" activeClassName={classes.active}>
-              Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contacts" activeClassName={classes.active}>
-              Contacts
-            </NavLink>
-          </li>
-        </ul>
+          <div className={classes["nav-icon"]} onClick={handleClick}>
+            <i> {click ? <BsX /> : <VscMenu/>}</i>
+          </div>
+        </div>
       </nav>
-    </header>
+    </>
   );
 };
 

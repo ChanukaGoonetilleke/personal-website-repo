@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import ProjectItem from "./ProjectItem";
 
 import blackjack from "../../images/blackjack.jpg";
+import hackon from '../../images/hackon.jpg'
 import construction from "../../images/construction.jpg";
 
 import classes from "./ProjectList.module.css";
@@ -12,6 +13,7 @@ const ProjectList = (props) => {
 
   const blackjackId = "1";
   const oslId = "2";
+  const hackonId = "3";
 
   return (
     <React.Fragment>
@@ -31,10 +33,17 @@ const ProjectList = (props) => {
             <React.Fragment>
               <ProjectItem
                 onClick={props.onShowDisplay}
+                image={hackon}
+                alt="hackon"
+                id={hackonId}
+              />
+              <ProjectItem
+                onClick={props.onShowDisplay}
                 image={construction}
                 alt="osl"
                 id={oslId}
               />
+              
             </React.Fragment>
           )}
         </div>

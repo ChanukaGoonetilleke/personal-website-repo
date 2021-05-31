@@ -12,6 +12,10 @@ import blackjack1 from "../../images/blackjack1.png";
 import blackjack2 from "../../images/blackjack2.png";
 import blackjack3 from "../../images/blackjack3.png";
 
+import hackon1 from "../../images/hackon1.png";
+import hackon2 from "../../images/hackon2.png";
+import hackon3 from "../../images/hackon3.png";
+
 import construction from "../../images/construction.jpg";
 
 const ProjectDisplay = (props) => {
@@ -37,6 +41,13 @@ const ProjectDisplay = (props) => {
     image3 = construction;
     title = "OSL Laptop Organizer";
     discription = "Application is in development phase";
+  } else if (displayCtx.id === "3") {
+    image1 = hackon1;
+    image2 = hackon2;
+    image3 = hackon3;
+    title = "Check Yourself!";
+    discription =
+      "Check yourself is an application my team and I made for the Hackon 2.0 coding competition. This application is intended to help people better deal with their own mental health issues. The application is a questionnaire assessment to find out more about yourself so you can figure out what you need more/less of in your life.";
   }
 
   return (
