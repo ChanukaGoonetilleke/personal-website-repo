@@ -15,7 +15,7 @@ const MainNavigation = () => {
     <>
       <nav className={classes["navbar"]}>
         <div className={classes["nav-container"]}>
-          <NavLink exact to="/" className={classes["nav-logo"]}>
+          <NavLink exact to="/" className={classes["nav-logo"]} >
             CG
             <i className={classes["fas fa-code"]}></i>
           </NavLink>

@@ -23,3 +23,12 @@
 .discription {
   color: rgb(66, 66, 66);
 }
+
+@media screen and (max-width: 960px) {
+  .div {
+    margin-right: auto;
+    margin-left: auto;
+    height: 400px;
+    width: 300px;
+  }
+}
