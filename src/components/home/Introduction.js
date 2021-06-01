@@ -1,12 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import chan from "../../images/chan.jpeg";
 import classes from './Introduction.module.css';
 
+import Aos from 'aos';
+import "aos/dist/aos.css";
+
 const Introduction = () => {
+
+  useEffect(() => {
+    Aos.init({duration: 2000});
+  }, []);
+
   return (
     <React.Fragment>
-      <div className={classes.div}>
+      <div data-aos="flip-right" className={classes.div}>
         <div className={classes.first}>
           <img className={classes.image} src={chan} alt="Chan" />
         </div>

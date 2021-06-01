@@ -20,7 +20,6 @@
 .edu {
   color: rgb(66, 66, 66);
   padding-top: 50px;
-  
 }
 
 .uni {
@@ -31,10 +30,15 @@
   width: 100px;
   height: 100px;
   margin: 2rem;
+  transition: transform 0.5s ease-in-out;
 }
 
-.sentenceEdu{
-    margin: auto;
+.img:hover {
+  transform: rotateY(180deg);;
+}
+
+.sentenceEdu {
+  margin: auto;
 }
 
 @media screen and (max-width: 960px) {
@@ -48,12 +52,11 @@
     padding-top: 100px;
     text-align: center;
   }
-  
+
   .edu {
     color: rgb(66, 66, 66);
     padding-top: 50px;
     text-align: center;
-    
   }
   .uni {
     display: block;
@@ -63,9 +66,10 @@
   .img {
     width: 100px;
     height: 100px;
+    transition: transform 0.7s ease-in-out;
   }
-  
-  .sentenceEdu{
+
+  .sentenceEdu {
     margin: auto;
   }
 }

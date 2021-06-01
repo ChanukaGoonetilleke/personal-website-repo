@@ -10,15 +10,44 @@
   display: block;
   color: rgb(66, 66, 66);
 }
-.name{
-    color:rgb(255, 61, 94);
-}
+
 .image {
   width: 300px;
   height: 300px;
   border-radius: 60px;
 }
 
-.title{
+.title2 {
   margin-top: 1rem;
+}
+
+.name {
+  color: rgb(255, 61, 94);
+}
+
+.title {
+  border-right: solid 3px rgba(255, 61, 94,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  margin: 0 auto;
+}
+
+/* Animation */
+.title {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 320px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255, 61, 94,.75);}
+  to{border-right-color: transparent;}
 }
