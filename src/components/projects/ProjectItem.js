@@ -1,14 +1,17 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 
 import classes from "./ProjectItem.module.css";
-import ProjectContext from '../../store/project-context';
+
+import { useDispatch } from "react-redux";
+import { idActions } from "../../store/index";
 
 const ProjectItem = (props) => {
-  const displayCtx = useContext(ProjectContext);
+
+  const dispatch = useDispatch();
 
   const onClickHandler = (event) => {
     event.preventDefault();
-    displayCtx.setId(props.id);
+    dispatch(idActions.setId(props.id));
     props.onClick();
   };
 

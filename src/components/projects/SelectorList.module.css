@@ -1,17 +1,45 @@
 .div {
-    text-align: center;
+  text-align: center;
 }
 
 .button {
-    background-color: white;
-    color: rgb(66, 66, 66);
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    border: none;
-    
+  background-color: #f1f1f1;
+  color: rgb(66, 66, 66);
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  border: none;
 }
 
-.button:focus{
-    background-color: rgb(255, 61, 94);
+.active {
+  background-color: rgb(255, 61, 94);
+  color: rgb(66, 66, 66);
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  border: none;
+}
+
+.button2:focus {
+  background-color: rgb(255, 61, 94);
+}
+
+@media screen and (max-width: 960px) {
+    .button {
+        background-color: #f1f1f1;
+        color: rgb(66, 66, 66);
+        width: 30%;
+        height: 50px;
+        text-align: center;
+        border: none;
+      }
+      
+      .active {
+        background-color: rgb(255, 61, 94);
+        color: rgb(66, 66, 66);
+        width: 30%;
+        height: 50px;
+        text-align: center;
+        border: none;
+      }
 }

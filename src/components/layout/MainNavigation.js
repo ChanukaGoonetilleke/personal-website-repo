@@ -5,17 +5,28 @@ import { NavLink, Link } from "react-router-dom";
 import { BsX } from "react-icons/bs";
 import { VscMenu } from "react-icons/vsc";
 
+import {useDispatch} from 'react-redux';
+import { selectorActions } from '../../store/index'; 
+
 import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
+  const dispatch = useDispatch();
+
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+
+  const resetSelector = () => {
+    dispatch(selectorActions.reactProjectShow());
+    dispatch(selectorActions.javaScriptProjectShow());
+  };
+
   return (
     <>
       <nav className={classes["navbar"]}>
         <div className={classes["nav-container"]}>
-          <NavLink exact to="/" className={classes["nav-logo"]} >
+          <NavLink exact to="/" className={classes["nav-logo"]} onClick={resetSelector}>
             CG
             <i className={classes["fas fa-code"]}></i>
           </NavLink>
@@ -39,7 +50,7 @@ const MainNavigation = () => {
                 to="/contacts"
                 activeClassName={classes["active"]}
                 className={classes["nav-links"]}
-                onClick={handleClick}
+                onClick={() => {handleClick(); resetSelector();}}
               >
                 Contacts
               </NavLink>

@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
-import ProjectContext from "../../store/project-context";
+import React from "react";
+
+import { useSelector } from "react-redux";
 
 import Modal from "../UI/Modal";
 
@@ -19,6 +20,8 @@ import hackon3 from "../../images/hackon3.png";
 import construction from "../../images/construction.jpg";
 
 const ProjectDisplay = (props) => {
+  const id = useSelector((state) => state.id.id);
+
   let image1;
   let image2;
   let image3;
@@ -26,22 +29,20 @@ const ProjectDisplay = (props) => {
   let title = "";
   let discription = "";
 
-  const displayCtx = useContext(ProjectContext);
-
-  if (displayCtx.id === "1") {
+  if (id === "1") {
     image1 = blackjack1;
     image2 = blackjack2;
     image3 = blackjack3;
     title = "Blackjack";
     discription =
       "I remade Blackjack for my web development course at Ontario Tech University. For the frontend of the game I use HTML, CSS, SVG, Javascript, JQuery, D3 and AJAX. For the backend of the game I used Node.js, Vue.js, Pug,  and SQLite. This game was very fun to make and I think it made me a better blackjack player.";
-  } else if (displayCtx.id === "2") {
+  } else if (id === "2") {
     image1 = construction;
     image2 = construction;
     image3 = construction;
     title = "OSL Laptop Organizer";
     discription = "Application is in development phase";
-  } else if (displayCtx.id === "3") {
+  } else if (id === "3") {
     image1 = hackon1;
     image2 = hackon2;
     image3 = hackon3;
