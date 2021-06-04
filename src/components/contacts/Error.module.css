@@ -1,0 +1,16 @@
+.div {
+    display: grid;
+    grid-template-columns: 85% 15%;
+  background-color: red;
+}
+
+.p {
+  color: rgb(66, 66, 66);
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.a {
+  color: rgb(66, 66, 66);
+  margin: 0.5rem;
+}
