@@ -6,7 +6,7 @@ import otu from "../../images/otu.png";
 
 const About = () => {
   const paragraphAboutMe =
-    "I was born and raised in Sri lanka. I immigrated to Canada in 2008 and I was brought up in the Canadain educational system. I have been passionate about software development since I was 15 years old. Initially, I started creating Android apps for my friends and family. Then in university, I started doing Web development and I fell in love. I believe Web development to be in the intersection of art and technology. This is why I feel like I can do this for a very long time.";
+    "I was born and raised in Sri lanka. I immigrated to Canada in 2008 and I was brought up in the Canadian educational system. I have been passionate about software development since I was 15 years old. Initially, I started creating Android apps for my friends and family. Then in university, I started learning Web development after I took a third year Web Devlopment (CSCI 3230U) class taught by Randy J. Fortier. I find developing software and learn about new technology very enjoyable. This is why I feel like I can be in the Tech Industry for a very long time.";
 
   return (
     <React.Fragment>

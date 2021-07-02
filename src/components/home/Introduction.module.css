@@ -23,31 +23,46 @@
 
 .name {
   color: rgb(255, 61, 94);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .title {
-  border-right: solid 3px rgba(255, 61, 94,.75);
+  border-right: solid 3px rgba(255, 61, 94, 0.75);
   white-space: nowrap;
-  overflow: hidden;    
+  overflow: hidden;
   margin: 0 auto;
+}
+
+.typical {
+  color: rgb(255, 61, 94);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Animation */
 .title {
-  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
+  animation: animated-text 4s steps(29, end) 1s 1 normal both,
+    animated-cursor 600ms steps(29, end) infinite;
 }
 
 /* text animation */
 
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 320px;}
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 320px;
+  }
 }
 
 /* cursor animations */
 
-@keyframes animated-cursor{
-  from{border-right-color: rgba(255, 61, 94,.75);}
-  to{border-right-color: transparent;}
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(255, 61, 94, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }

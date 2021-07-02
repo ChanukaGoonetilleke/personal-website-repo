@@ -9,46 +9,33 @@ import classes from "./ProjectDisplay.module.css";
 import { Carousel } from "react-bootstrap";
 import { BsX } from "react-icons/bs";
 
-import blackjack1 from "../../images/blackjack1.png";
-import blackjack2 from "../../images/blackjack2.png";
-import blackjack3 from "../../images/blackjack3.png";
-
-import hackon1 from "../../images/hackon1.png";
-import hackon2 from "../../images/hackon2.png";
-import hackon3 from "../../images/hackon3.png";
-
-import construction from "../../images/construction.jpg";
+import { BlackjackData } from "./projectImages/ImageData";
+import { OslData } from "./projectImages/ImageData";
+import { PowerData } from "./projectImages/ImageData";
 
 const ProjectDisplay = (props) => {
   const id = useSelector((state) => state.id.id);
 
-  let image1;
-  let image2;
-  let image3;
+  let view;
 
   let title = "";
   let discription = "";
 
   if (id === "1") {
-    image1 = blackjack1;
-    image2 = blackjack2;
-    image3 = blackjack3;
+    view = BlackjackData;
     title = "Blackjack";
     discription =
-      "I remade Blackjack for my web development course at Ontario Tech University. For the frontend of the game I use HTML, CSS, SVG, Javascript, JQuery, D3 and AJAX. For the backend of the game I used Node.js, Vue.js, Pug,  and SQLite. This game was very fun to make and I think it made me a better blackjack player.";
+      "I remade Blackjack for my web development course at Ontario Tech University. For the frontend of the game I use HTML, CSS, SVG, Javascript, JQuery, D3 and AJAX. For the backend of the game I used Node.js, and SQLite. This game was very fun to make and I think it made me a better blackjack player.";
   } else if (id === "2") {
-    image1 = construction;
-    image2 = construction;
-    image3 = construction;
+    view = OslData;
     title = "OSL Laptop Organizer";
-    discription = "Application is in development phase";
-  } else if (id === "3") {
-    image1 = hackon1;
-    image2 = hackon2;
-    image3 = hackon3;
-    title = "Check Yourself!";
     discription =
-      "Check yourself is an application my team and I made for the Hackon 2.0 coding competition. This application is intended to help people better deal with their own mental health issues. The application is a questionnaire assessment to find out more about yourself so you can figure out what you need more/less of in your life.";
+      "Independently developed a laptop inventory organization application to keep track of laptops for OSL. The application was developed using React Typescript for the frontend and Firebase for the backend.";
+  } else if (id === "3") {
+    view = PowerData;
+    title = "PowerPlant Farms";
+    discription =
+      "PowerPlant Farms is a startup based in Pickering, Ontario that is building a next generation vertical farming solution to help culinary creatives bring their imagination to life. My role at PowerPlant Farms was to create the Human Machine Interface (HMI) using React. Furthermore, I would have to communicate with a Flask Backend API to perform functions, and display data in a creative manner.";
   }
 
   return (
@@ -56,15 +43,13 @@ const ProjectDisplay = (props) => {
       <Modal onClose={props.onHideDisplay}>
         <div className={classes.content}>
           <Carousel>
-            <Carousel.Item>
-              <img className="d-block w-100" src={image1} alt="First slide" />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img className="d-block w-100" src={image2} alt="Second slide" />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img className="d-block w-100" src={image3} alt="Third slide" />
-            </Carousel.Item>
+            {view.map((item, index) => {
+              return (
+                <Carousel.Item key={index}>
+                  <img className="d-block w-100" src={item.image} alt="slide" />
+                </Carousel.Item>
+              );
+            })}
           </Carousel>
         </div>
         <h1 className={classes.title}>{title}</h1>
