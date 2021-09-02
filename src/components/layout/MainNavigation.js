@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { BsX } from "react-icons/bs";
 import { VscMenu } from "react-icons/vsc";
 
-import {useDispatch} from 'react-redux';
-import { selectorActions } from '../../store/index'; 
+import { useDispatch } from "react-redux";
+import { selectorActions } from "../../store/index";
 
-import classes from './MainNavigation.module.css';
+import classes from "./MainNavigation.module.css";
+
+import { Link } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 const MainNavigation = () => {
   const dispatch = useDispatch();
@@ -26,38 +29,47 @@ const MainNavigation = () => {
     <>
       <nav className={classes["navbar"]}>
         <div className={classes["nav-container"]}>
-          <NavLink exact to="/" className={classes["nav-logo"]} onClick={resetSelector}>
+          <Link
+            to="home"
+            className={classes["nav-logo"]}
+            onClick={() => {
+              scroll.scrollToTop();
+            }}
+          >
             CG
             <i className={classes["fas fa-code"]}></i>
-          </NavLink>
+          </Link>
 
           <ul className={click ? classes["nav-menuChan"] : classes["nav-menu"]}>
-           
             <li className={classes["nav-item"]}>
-              <NavLink
-                exact
-                to="/projects"
+              <Link
+                to="projects"
                 activeClassName={classes["active"]}
                 className={classes["nav-links"]}
                 onClick={handleClick}
+                smooth={true}
+                offset={-100}
+                duration={1000}
               >
                 Projects
-              </NavLink>
+              </Link>
             </li>
             <li className={classes["nav-item"]}>
-              <NavLink
-                exact
-                to="/contacts"
+              <Link
+                to="contacts"
                 activeClassName={classes["active"]}
                 className={classes["nav-links"]}
-                onClick={() => {handleClick(); resetSelector();}}
+                offset={-100}
+                onClick={() => {
+                  handleClick();
+                }}
               >
                 Contacts
-              </NavLink>
+              </Link>
             </li>
           </ul>
           <div className={classes["nav-icon"]} onClick={handleClick}>
-            <i> {click ? <BsX /> : <VscMenu/>}</i>
+            <i> {click ? <BsX /> : <VscMenu />}</i>
           </div>
         </div>
       </nav>

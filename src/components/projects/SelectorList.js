@@ -43,7 +43,8 @@ const SelectorList = () => {
 
   return (
     <React.Fragment>
-      <div className={classes.div}>
+      <div className={classes.div} id="projects">
+        <h1 className={classes.title}>Projects</h1>
         <button className={all ? classes.active: classes.button} onClick={allOnClickHandler}>ALL</button>
         <button className={javeScript ? classes.active : classes.button} onClick={javaScriptOnClickHandler}>JAVASCRIPT</button>
         <button className={react ? classes.active : classes.button} onClick={reactOnClickHandler}>REACT.JS</button>

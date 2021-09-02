@@ -1,5 +1,5 @@
 .wrap {
-    background-color: #050A30;
+    background-color: white;
     height: 800px;
 }
 
@@ -11,7 +11,7 @@
 .title {
   text-align: center;
   display: block;
-  color: white;
+  color: rgb(66, 66, 66);
   padding-top: 100px;
 }
 

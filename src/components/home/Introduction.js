@@ -26,7 +26,7 @@ const Introduction = () => {
           <h2>
             I'm a{" "}
             <Typical
-            className={classes.typical}
+              className={classes.typical}
               steps={["Software Developer", 2000, "Tech Enthusiast", 2000]}
               loop={Infinity}
               wrapper="b"

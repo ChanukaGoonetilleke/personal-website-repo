@@ -7,10 +7,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import Success from "./Success";
-import Error from './Error';
+import Error from "./Error";
 
 export default function ContactUs() {
-
   const [success, setSuccess] = useState(false);
   const [fail, setFail] = useState(false);
 
@@ -45,65 +44,71 @@ export default function ContactUs() {
     event.preventDefault();
     setSuccess(false);
     setFail(false);
-  }
+  };
 
   return (
     <React.Fragment>
-      <div data-aos="fade-right" className="container">
-        <form className="contact-form" onSubmit={sendEmail}>
-          <div className="row pt-5 mx-auto">
-            <div className="col-8 form-group mx-auto">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Name"
-                name="name"
-                required
-              />
-               
-            </div>
-            <div className="col-8 form-group pt-2 mx-auto">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Email Address"
-                name="email"
-                required
-              />
-            </div>
-            <div className="col-8 form-group pt-2 mx-auto">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Subject"
-                name="subject"
-              />
-            </div>
-
-            <div className="col-8 form-group pt-2 mx-auto">
-              <textarea
-                type="text"
-                id=""
-                cols="30"
-                rows="8"
-                className="form-control"
-                placeholder="Your Message"
-                name="message"
-              ></textarea>
-              {success&&<Success className="form-control" onClose={onCloseHanlder}/>}
-              {fail && <Error className="form-control" onClose={onCloseHanlder}/>}
-            </div>
-            <div className="col-8 pt-3 mx-auto">
-              <div className={classes.button}>
+      <div className={classes.container}>
+        <h1 className={classes.title}>Contacts</h1>
+        <div data-aos="fade-right" className="container" id="contacts">
+          <form className="contact-form" onSubmit={sendEmail}>
+            <div className="row pt-5 mx-auto">
+              <div className="col-8 form-group mx-auto">
                 <input
-                  type="submit"
-                  className="btn btn-info"
-                  value="Send Message"
+                  type="text"
+                  className="form-control"
+                  placeholder="Name"
+                  name="name"
+                  required
                 />
               </div>
+              <div className="col-8 form-group pt-2 mx-auto">
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Email Address"
+                  name="email"
+                  required
+                />
+              </div>
+              <div className="col-8 form-group pt-2 mx-auto">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Subject"
+                  name="subject"
+                />
+              </div>
+
+              <div className="col-8 form-group pt-2 mx-auto">
+                <textarea
+                  type="text"
+                  id=""
+                  cols="30"
+                  rows="8"
+                  className="form-control"
+                  placeholder="Your Message"
+                  name="message"
+                ></textarea>
+                {success && (
+                  <Success className="form-control" onClose={onCloseHanlder} />
+                )}
+                {fail && (
+                  <Error className="form-control" onClose={onCloseHanlder} />
+                )}
+              </div>
+              <div className="col-8 pt-3 mx-auto">
+                <div className={classes.button}>
+                  <input
+                    type="submit"
+                    className="btn btn-info"
+                    value="Send Message"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </React.Fragment>
   );
