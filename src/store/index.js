@@ -3,6 +3,9 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 const initialSelectorState = {
   reactProject: true,
   javaScriptProject: true,
+  outsystemsProject: true,
+  seleniumProject: true,
+  powerPlatformProject: true,
 };
 
 const selectorSlice = createSlice({
@@ -20,6 +23,24 @@ const selectorSlice = createSlice({
     },
     javaScriptProjectHide(state) {
       state.javaScriptProject = false;
+    },
+    outsystemsProjectShow(state) {
+      state.outsystemsProject = true;
+    },
+    outsystemsProjectHide(state) {
+      state.outsystemsProject = false;
+    },
+    seleniumProjectShow(state) {
+      state.seleniumProject = true;
+    },
+    seleniumProjectHide(state) {
+      state.seleniumProject = false;
+    },
+    powerPlatformProjectShow(state) {
+      state.powerPlatformProject = true;
+    },
+    powerPlatformProjectHide(state) {
+      state.powerPlatformProject = false;
     },
   },
 });

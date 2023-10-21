@@ -6,10 +6,9 @@ import TrateList from "../components/home/TrateList";
 import ProjectDisplay from "../components/projects/ProjectDisplay";
 import ProjectList from "../components/projects/ProjectList";
 import SelectorList from "../components/projects/SelectorList";
-import ContactForm from '../components/contacts/ContactForm';
+import ContactForm from "../components/contacts/ContactForm";
 
 const Home = () => {
-
   const [displayIsShown, setDisplayIsShown] = useState(false);
 
   useEffect(() => {
@@ -22,7 +21,7 @@ const Home = () => {
 
   const hideDisplayHandler = () => {
     setDisplayIsShown(false);
-  }
+  };
 
   return (
     <React.Fragment>
@@ -30,9 +29,9 @@ const Home = () => {
       <TrateList />
       <Languages />
       <About />
-      {displayIsShown && <ProjectDisplay onHideDisplay={hideDisplayHandler}/>}
+      {displayIsShown && <ProjectDisplay onHideDisplay={hideDisplayHandler} />}
       <SelectorList />
-      <ProjectList onShowDisplay={showDisplayHandler}/>
+      <ProjectList onShowDisplay={showDisplayHandler} />
       <ContactForm />
     </React.Fragment>
   );

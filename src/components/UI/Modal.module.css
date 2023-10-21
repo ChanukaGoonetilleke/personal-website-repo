@@ -8,18 +8,33 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
+.container {
+  border-style: solid;
+  border-color: red;
+}
+
 .modal {
   position: fixed;
+  /*
   top: 15vh;
   left: 5%;
   width: 90%;
+  max-height: calc(100vh - 210px);
+  */
+  top: 15vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: calc(100vh - 210px);
+  width: 70%;
+
   background-color: white;
   padding: 1rem;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
-  max-height: calc(100vh - 210px);
   overflow-y: auto;
 }
 
@@ -44,10 +59,10 @@
   background: rgb(255, 61, 94);
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 960px) {
   .modal {
-    width: 40rem;
-    left: calc(50% - 20rem);
+    width: 95%;
+    max-height: calc(100vh);
   }
 }
 

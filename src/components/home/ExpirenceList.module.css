@@ -1,0 +1,16 @@
+.title {
+  color: rgb(66, 66, 66);
+  padding-top: 100px;
+}
+
+.wrapper {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  .title {
+    color: rgb(66, 66, 66);
+    padding-top: 100px;
+    text-align: center;
+  }
+}

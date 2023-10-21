@@ -3,26 +3,28 @@ import Trate from "./Trate";
 
 import passion from "../../images/passion.png";
 import solver from "../../images/solver.png";
-import commuication from '../../images/commuication.png';
+import commuication from "../../images/commuication.png";
 
 import classes from "./TrateList.module.css";
 
-import Aos from 'aos';
+import Aos from "aos";
 import "aos/dist/aos.css";
 
 const TrateList = () => {
   const passionTitle = "Passion";
   const passionDisc =
-    "I am not just looking to complete a job. I want to create real, lasting and personalized applications.";
+    "I am not solely focused on finishing tasks; my aim is to craft meaningful, enduring, and customized solutions.";
 
   const solverTitle = "Problem Solver";
-  const solverDisc = "I am a firm believer that there is no problem that does not have a direct or indirect solution.";
+  const solverDisc =
+    "I firmly believe that every problem, whether direct or indirect, has a viable solution.";
 
   const commTitle = "Soft Skills";
-  const commDisc = "I am a people person and I love to teach and learn from my peers";
+  const commDisc =
+    "I thrive on interpersonal connections and relish the opportunity to both impart knowledge and gain insights from my peers.";
 
   useEffect(() => {
-    Aos.init({duration: 2000})
+    Aos.init({ duration: 2000 });
   }, []);
 
   return (

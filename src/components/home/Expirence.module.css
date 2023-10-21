@@ -1,0 +1,30 @@
+.wrapper {
+    padding-top: 50px;
+}
+
+.div{
+    display: flex;
+    padding-top: 25px;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    margin: 2rem;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .img:hover {
+    transform: rotateY(180deg);;
+  }
+
+  .content {
+     margin:auto;
+  }
+
+  @media screen and (max-width: 960px) {
+    .div {
+      display: block;
+      text-align: center;
+    }
+  }

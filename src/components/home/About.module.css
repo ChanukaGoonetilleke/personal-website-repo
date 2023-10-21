@@ -34,7 +34,7 @@
 }
 
 .img:hover {
-  transform: rotateY(180deg);;
+  transform: rotateY(180deg);
 }
 
 .sentenceEdu {
@@ -59,7 +59,8 @@
     text-align: center;
   }
   .uni {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
   }
 
@@ -67,6 +68,7 @@
     width: 100px;
     height: 100px;
     transition: transform 0.7s ease-in-out;
+    margin: auto;
   }
 
   .sentenceEdu {

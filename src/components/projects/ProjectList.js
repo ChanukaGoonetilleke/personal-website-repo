@@ -4,9 +4,12 @@ import { useSelector } from "react-redux";
 import ProjectItem from "./ProjectItem";
 
 import blackjack from "../../images/blackjack.jpg";
-import hackon from "../../images/hackon.jpg";
+import outsystems from "../../images/outsystems.png";
 import osl from "../../images/osl.jpeg";
 import power from "../../images/power.jpg";
+import seleniumImage from "../../images/selenium.png";
+import powerBIImage from "../../images/powerBI.png";
+import powerPlatformImage from "../../images/powerPlatform.png";
 
 import classes from "./ProjectList.module.css";
 
@@ -18,10 +21,23 @@ const ProjectList = (props) => {
   const javaScriptProject = useSelector(
     (state) => state.selector.javaScriptProject
   );
+  const outsystemsProject = useSelector(
+    (state) => state.selector.outsystemsProject
+  );
+  const seleniumProject = useSelector(
+    (state) => state.selector.seleniumProject
+  );
+  const powerPlatformProject = useSelector(
+    (state) => state.selector.powerPlatformProject
+  );
 
   const blackjackId = "1";
   const oslId = "2";
   const powerId = "3";
+  const adProId = "4";
+  const seleniumId = "5";
+  const hackathonId = "6";
+  const powerBiId = "7";
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -61,6 +77,54 @@ const ProjectList = (props) => {
                 id={oslId}
                 title="Laptop Organizer"
                 tools="React JS / Firebase"
+              />
+            </React.Fragment>
+          )}
+          {outsystemsProject && (
+            <React.Fragment>
+              <ProjectItem
+                onClick={props.onShowDisplay}
+                image={outsystems}
+                alt="adPro"
+                id={adProId}
+                title="AdPro"
+                tools="Outsystems / Azure"
+              />
+            </React.Fragment>
+          )}
+          {seleniumProject && (
+            <React.Fragment>
+              <ProjectItem
+                onClick={props.onShowDisplay}
+                image={seleniumImage}
+                alt="selenium"
+                id={seleniumId}
+                title="CSS Selenium"
+                tools="Selenium / C#"
+              />
+            </React.Fragment>
+          )}
+          {powerPlatformProject && (
+            <React.Fragment>
+              <ProjectItem
+                onClick={props.onShowDisplay}
+                image={powerBIImage}
+                alt="powerBI"
+                id={powerBiId}
+                title="Power BI Reports"
+                tools="Power BI / SQL Server"
+              />
+            </React.Fragment>
+          )}
+          {powerPlatformProject && (
+            <React.Fragment>
+              <ProjectItem
+                onClick={props.onShowDisplay}
+                image={powerPlatformImage}
+                alt="hackathon"
+                id={hackathonId}
+                title="Microsoft Hackathon"
+                tools="Power Platform"
               />
             </React.Fragment>
           )}

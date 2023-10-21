@@ -11,8 +11,8 @@
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-    height: 350px;
-    width: 350px;
+  height: 350px;
+  width: 350px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -35,7 +35,7 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-    height: 350px;
+  height: 350px;
   width: 350px;
   background-color: #bbb;
   color: black;
@@ -43,10 +43,10 @@
 
 /* Style the back side */
 .flip-card-back {
-    height: 350px;
+  height: 350px;
   width: 350px;
   padding: 3rem;
-  background-color: #40E0D0;
+  background-color: orange;
   color: white;
   transform: rotateY(180deg);
 }
@@ -54,7 +54,7 @@
 .button {
   margin-top: 3rem;
   background-color: white;
-  color: rgb(66, 66, 66);
+  color: rgb(255, 61, 94);
   text-align: center;
   border: 2.5px solid rgb(255, 61, 94);
   width: 70%;

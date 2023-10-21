@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import chan from "../../images/chan.jpeg";
+import chan from "../../images/Personal_Photo.png";
 import classes from "./Introduction.module.css";
 
 import Typical from "react-typical";
@@ -27,7 +27,7 @@ const Introduction = () => {
             I'm a{" "}
             <Typical
               className={classes.typical}
-              steps={["Software Developer", 2000, "Tech Enthusiast", 2000]}
+              steps={["Solutions Architect", 2000, "Software Engineer", 2000]}
               loop={Infinity}
               wrapper="b"
             />
