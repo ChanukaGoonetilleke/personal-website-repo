@@ -14,95 +14,62 @@ const SelectorList = () => {
   const [outsystems, setOutsystems] = useState(false);
   const [selenium, setSelenium] = useState(false);
   const [powerPlatform, setPowerPlatform] = useState(false);
+  const [aws, setAws] = useState(false);
 
   const allOnClickHandler = (event) => {
     event.preventDefault();
     setAll(true);
-    setJavaScript(false);
     setReact(false);
-    setOutsystems(false);
-    setSelenium(false);
     setPowerPlatform(false);
+    setAws(false);
     dispatch(selectorActions.javaScriptProjectShow());
     dispatch(selectorActions.reactProjectShow());
     dispatch(selectorActions.outsystemsProjectShow());
     dispatch(selectorActions.seleniumProjectShow());
     dispatch(selectorActions.powerPlatformProjectShow());
-  };
-
-  const javaScriptOnClickHandler = (event) => {
-    event.preventDefault();
-    setAll(false);
-    setJavaScript(true);
-    setReact(false);
-    setOutsystems(false);
-    setSelenium(false);
-    setPowerPlatform(false);
-    dispatch(selectorActions.javaScriptProjectShow());
-    dispatch(selectorActions.reactProjectHide());
-    dispatch(selectorActions.outsystemsProjectHide());
-    dispatch(selectorActions.seleniumProjectHide());
-    dispatch(selectorActions.powerPlatformProjectHide());
+    dispatch(selectorActions.awsProjectShow());
   };
 
   const reactOnClickHandler = (event) => {
     event.preventDefault();
     setAll(false);
-    setJavaScript(false);
     setReact(true);
-    setOutsystems(false);
-    setSelenium(false);
     setPowerPlatform(false);
+    setAws(false);
     dispatch(selectorActions.javaScriptProjectHide());
     dispatch(selectorActions.reactProjectShow());
     dispatch(selectorActions.outsystemsProjectHide());
     dispatch(selectorActions.seleniumProjectHide());
     dispatch(selectorActions.powerPlatformProjectHide());
-  };
-
-  const outsystemsOnClickHandler = (event) => {
-    event.preventDefault();
-    setAll(false);
-    setJavaScript(false);
-    setReact(false);
-    setOutsystems(true);
-    setSelenium(false);
-    setPowerPlatform(false);
-    dispatch(selectorActions.javaScriptProjectHide());
-    dispatch(selectorActions.reactProjectHide());
-    dispatch(selectorActions.outsystemsProjectShow());
-    dispatch(selectorActions.seleniumProjectHide());
-    dispatch(selectorActions.powerPlatformProjectHide());
-  };
-
-  const seleniumOnClickHandler = (event) => {
-    event.preventDefault();
-    setAll(false);
-    setJavaScript(false);
-    setReact(false);
-    setOutsystems(false);
-    setSelenium(true);
-    setPowerPlatform(false);
-    dispatch(selectorActions.javaScriptProjectHide());
-    dispatch(selectorActions.reactProjectHide());
-    dispatch(selectorActions.outsystemsProjectHide());
-    dispatch(selectorActions.seleniumProjectShow());
-    dispatch(selectorActions.powerPlatformProjectHide());
+    dispatch(selectorActions.awsProjectHide());
   };
 
   const powerPlatformOnClickHandler = (event) => {
     event.preventDefault();
     setAll(false);
-    setJavaScript(false);
     setReact(false);
-    setOutsystems(false);
-    setSelenium(false);
     setPowerPlatform(true);
+    setAws(false);
     dispatch(selectorActions.javaScriptProjectHide());
     dispatch(selectorActions.reactProjectHide());
     dispatch(selectorActions.outsystemsProjectHide());
     dispatch(selectorActions.seleniumProjectHide());
     dispatch(selectorActions.powerPlatformProjectShow());
+    dispatch(selectorActions.awsProjectHide());
+  };
+
+  const awsOnClickHandler = (event) => {
+    event.preventDefault();
+    setAll(false);
+    setReact(false);
+    setPowerPlatform(false);
+    setAws(true);
+    dispatch(selectorActions.javaScriptProjectHide());
+    dispatch(selectorActions.reactProjectHide());
+    dispatch(selectorActions.outsystemsProjectHide());
+    dispatch(selectorActions.seleniumProjectHide());
+    dispatch(selectorActions.powerPlatformProjectHide());
+    dispatch(selectorActions.awsProjectShow());
   };
 
   return (
@@ -128,6 +95,13 @@ const SelectorList = () => {
           onClick={powerPlatformOnClickHandler}
         >
           POWER PLATFORM
+        </button>
+
+        <button
+          className={aws ? classes.active : classes.button}
+          onClick={awsOnClickHandler}
+        >
+          AWS
         </button>
       </div>
     </React.Fragment>

@@ -30,6 +30,7 @@ const ProjectList = (props) => {
   const powerPlatformProject = useSelector(
     (state) => state.selector.powerPlatformProject
   );
+  const awsProject = useSelector((state) => state.selector.awsProject);
 
   const blackjackId = "1";
   const oslId = "2";
@@ -38,6 +39,7 @@ const ProjectList = (props) => {
   const seleniumId = "5";
   const hackathonId = "6";
   const powerBiId = "7";
+  const awsSikerId = "8";
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -125,6 +127,18 @@ const ProjectList = (props) => {
                 id={hackathonId}
                 title="Microsoft Hackathon"
                 tools="Power Platform"
+              />
+            </React.Fragment>
+          )}
+          {awsProject && (
+            <React.Fragment>
+              <ProjectItem
+                onClick={props.onShowDisplay}
+                image="https://yt3.googleusercontent.com/HRJKaJg70sqBrCNh7Tf2RSjXTb_5hCUn7Hht7mxUJMg77EWkihh55JklD-KhwAMhwY31ox5O=s900-c-k-c0x00ffffff-no-rj"
+                alt="hackathon"
+                id={awsSikerId}
+                title="Siker Media"
+                tools="AWS"
               />
             </React.Fragment>
           )}

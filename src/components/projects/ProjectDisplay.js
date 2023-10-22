@@ -16,6 +16,7 @@ import { adProData } from "./projectImages/ImageData";
 import { seleniumData } from "./projectImages/ImageData";
 import { powerBIData } from "./projectImages/ImageData";
 import { hackathonData } from "./projectImages/ImageData";
+import { awsData } from "./projectImages/ImageData";
 
 const ProjectDisplay = (props) => {
   const id = useSelector((state) => state.id.id);
@@ -60,6 +61,11 @@ const ProjectDisplay = (props) => {
     title = "Power BI Reports";
     discription =
       "In the final stages of the AdPro project, I undertook the task of meticulously crafting 10 Key Performance Indicator (KPI) reports utilizing Power BI. Collaborating closely with our esteemed client, I ensured that the Power BI reports were tailored precisely to their preferences, both in appearance and functionality. Beyond the creation of these reports, I facilitated their seamless deployment across various environments, utilizing the deploy functionality within Power BI to transition them effectively to the DEV, TEST, and UAT environments.";
+  } else if (id === "8") {
+    view = awsData;
+    title = "Siker Media AWS Migration";
+    discription =
+      "Siker Media, an advertising agency headquartered in Toronto, Canada, sought my assistance in migrating to AWS. Initially relying on HostGator for deploying multiple WordPress websites, they encountered persistent latency issues and server-side errors. I provided comprehensive consultation to the Siker team, orchestrating a seamless transition of their hosting and DNS services to AWS, ensuring improved quality of service and cost-efficiency.";
   }
 
   return (

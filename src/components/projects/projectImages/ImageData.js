@@ -39,6 +39,11 @@ import hackathon4 from "../../../images/hackathon4.JPG";
 import hackathon5 from "../../../images/hackathon5.JPG";
 import hackathon6 from "../../../images/hackathon6.JPG";
 
+import aws1 from "../../../images/aws1.png";
+import aws2 from "../../../images/aws2.png";
+import aws3 from "../../../images/aws3.png";
+import aws4 from "../../../images/aws4.png";
+
 export const BlackjackData = [
   {
     image: blackjack1,
@@ -153,5 +158,20 @@ export const hackathonData = [
   },
   {
     image: hackathon6,
+  },
+];
+
+export const awsData = [
+  {
+    image: aws4,
+  },
+  {
+    image: aws3,
+  },
+  {
+    image: aws2,
+  },
+  {
+    image: aws1,
   },
 ];

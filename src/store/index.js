@@ -6,6 +6,7 @@ const initialSelectorState = {
   outsystemsProject: true,
   seleniumProject: true,
   powerPlatformProject: true,
+  awsProject: true,
 };
 
 const selectorSlice = createSlice({
@@ -41,6 +42,12 @@ const selectorSlice = createSlice({
     },
     powerPlatformProjectHide(state) {
       state.powerPlatformProject = false;
+    },
+    awsProjectShow(state) {
+      state.awsProject = true;
+    },
+    awsProjectHide(state) {
+      state.awsProject = false;
     },
   },
 });
